@@ -111,7 +111,7 @@ class HighlightJS extends Base {
             },
             switchToTheme = definedThemes[theme];
 
-        switchToTheme ??= theme;
+        switchToTheme = switchToTheme || theme;
         this.themePath = switchToTheme;
         Stylesheet.createStyleSheet(null, 'hljs-theme', switchToTheme);
     }
